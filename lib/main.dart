@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uang_bijak/core/theme/colors.dart';
-import 'package:uang_bijak/presentation/home/views/home_screen.dart';
+import 'package:uang_bijak/presentation/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(
-          surface: AppColors.primary,
+        colorScheme: ColorScheme.light(
+          surface: Colors.grey.shade100,
           onSurface: AppColors.tertiary2,
           primary: AppColors.primary,
           secondary: AppColors.secondary,
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           outline: Colors.grey,
         ),
       ),
-      home: const HomeScreen(),
+      home: const MainScreen(),
     );
   }
 }
