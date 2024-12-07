@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uang_bijak/core/theme/colors.dart';
 import 'package:uang_bijak/presentation/home/views/home_screen.dart';
 import 'package:uang_bijak/presentation/profile/views/profile_screen.dart';
 import 'package:uang_bijak/presentation/statistic/views/statistic_screen.dart';
@@ -14,8 +13,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
-  late Color selectedItem = AppColors.tertiary2;
-  Color unselectedItem = Colors.grey;
 
   final pages = const [
     HomeScreen(),
