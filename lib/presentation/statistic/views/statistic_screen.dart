@@ -6,11 +6,29 @@ class StatisticScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> months = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'];
+    final List<String> days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    final List<String> weeks = [
+      '1 Week',
+      '2 Week',
+      '3 Week',
+      '4 Week',
+      '5 Week',
+      '6 Week'
+    ];
+    final List<String> years = ['2019', '2020', '2021', '2022', '2023', '2024'];
+
     return DefaultTabController(
       length: 4, // Jumlah tab
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Statistics'),
+          title: const Text(
+            'Statistics',
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           centerTitle: false,
           actions: [
             IconButton(
@@ -30,12 +48,20 @@ class StatisticScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            StatisticTabContent(), // Konten untuk tab "Day"
-            StatisticTabContent(), // Konten untuk tab "Week"
-            StatisticTabContent(), // Konten untuk tab "Month"
-            StatisticTabContent(), // Konten untuk tab "Year"
+            StatisticTabContent(
+              datas: days,
+            ), // Konten untuk tab "Day"
+            StatisticTabContent(
+              datas: weeks,
+            ), // Konten untuk tab "Week"
+            StatisticTabContent(
+              datas: months,
+            ), // Konten untuk tab "Month"
+            StatisticTabContent(
+              datas: years,
+            ), // Konten untuk tab "Year"
           ],
         ),
       ),
