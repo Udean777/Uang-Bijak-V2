@@ -58,21 +58,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.add,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.settings,
-                      ),
-                    )
-                  ],
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.settings,
+                  ),
                 )
               ],
             ),
