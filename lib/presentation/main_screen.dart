@@ -48,6 +48,9 @@ class _MainScreenState extends State<MainScreen> {
                     : "assets/icons/home_outlined.png",
                 width: 30,
                 height: 30,
+                color: selectedIndex == 0
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
               ),
               label: 'Home',
             ),
@@ -58,6 +61,9 @@ class _MainScreenState extends State<MainScreen> {
                     : "assets/icons/chart_outlined.png",
                 width: 30,
                 height: 30,
+                color: selectedIndex == 1
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
               ),
               label: 'Statistic',
             ),
@@ -68,6 +74,9 @@ class _MainScreenState extends State<MainScreen> {
                     : "assets/icons/wallet_outlined.png",
                 width: 30,
                 height: 30,
+                color: selectedIndex == 2
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
               ),
               label: 'Wallet',
             ),
@@ -78,6 +87,9 @@ class _MainScreenState extends State<MainScreen> {
                     : "assets/icons/profile_outlined.png",
                 width: 30,
                 height: 30,
+                color: selectedIndex == 3
+                    ? Theme.of(context).colorScheme.primary
+                    : null,
               ),
               label: 'Profile',
             ),

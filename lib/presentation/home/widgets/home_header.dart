@@ -20,12 +20,12 @@ class HeaderHome extends StatelessWidget {
                   height: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.yellow[700],
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.person,
-                  color: Colors.yellow[800],
+                  color: Colors.white,
                 )
               ],
             ),
@@ -57,8 +57,9 @@ class HeaderHome extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(
-            Icons.settings,
+          icon: Icon(
+            Icons.notifications,
+            color: Theme.of(context).colorScheme.primary,
           ),
         )
       ],
