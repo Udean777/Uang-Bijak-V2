@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uang_bijak/presentation/profile/widgets/row_menu.dart';
@@ -38,8 +39,8 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Image(
-                    image: NetworkImage(
-                      "https://avatar.iran.liara.run/public/boy",
+                    image: CachedNetworkImageProvider(
+                      "https://avatar.iran.liara.run/public/31",
                     ),
                     width: 120,
                     height: 120,

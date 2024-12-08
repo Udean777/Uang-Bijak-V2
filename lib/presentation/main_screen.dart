@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uang_bijak/presentation/add_expense/views/add_expense.dart';
 import 'package:uang_bijak/presentation/home/views/home_screen.dart';
 import 'package:uang_bijak/presentation/profile/views/profile_screen.dart';
 import 'package:uang_bijak/presentation/statistic/views/statistic_screen.dart';
@@ -14,11 +15,12 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int selectedIndex = 0;
 
-  final pages = const [
-    HomeScreen(),
-    StatisticScreen(),
-    WalletScreen(),
-    ProfileScreen()
+  final pages = [
+    const HomeScreen(),
+    const StatisticScreen(),
+    Container(),
+    const WalletScreen(),
+    const ProfileScreen()
   ];
 
   @override
@@ -65,13 +67,39 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Statistic',
             ),
             BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const AddExpense(),
+                    ),
+                  );
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                    ),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(5),
+                    ),
+                  ),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              label: 'Wallet',
+            ),
+            BottomNavigationBarItem(
               icon: Image.asset(
-                selectedIndex == 2
+                selectedIndex == 3
                     ? "assets/icons/wallet_filled.png"
                     : "assets/icons/wallet_outlined.png",
                 width: 30,
                 height: 30,
-                color: selectedIndex == 2
+                color: selectedIndex == 3
                     ? Theme.of(context).colorScheme.primary
                     : null,
               ),
@@ -79,12 +107,12 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
-                selectedIndex == 3
+                selectedIndex == 4
                     ? "assets/icons/profile_filled.png"
                     : "assets/icons/profile_outlined.png",
                 width: 30,
                 height: 30,
-                color: selectedIndex == 3
+                color: selectedIndex == 4
                     ? Theme.of(context).colorScheme.primary
                     : null,
               ),
