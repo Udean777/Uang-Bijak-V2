@@ -25,7 +25,7 @@ class StatisticScreen extends StatelessWidget {
           title: const Text(
             'Statistics',
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
           ),
